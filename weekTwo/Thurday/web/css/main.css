@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+p,
+h1,
+h2,
+h3,
+h4 {
+  overflow-wrap: break-word;
+}
+
+p, li, figcation {
+  text-wrap: pretty;
+  max-width: 65ch;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  height: auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  font-style: italic;
+  shape-margin: 1rem;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+body {
+  font-family: "Rubik", sans-serif;
+}
+
+.header {
+  background-color: #000;
+  color: white;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+.header__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__content .cart {
+  position: relative;
+  text-decoration: none;
+}
+.header__content .cart i {
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+}
+.header__content .cart__count {
+  position: absolute;
+  top: -10px;
+  background-color: red;
+  right: -10px;
+  border-radius: 50%;
+  color: white;
+}
+
+.container {
+  margin: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}
+.container__card {
+  border: 1px solid #000;
+}
+.container__card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.container__card__content {
+  padding: 1rem;
+  text-align: center;
+}
+.container__card__content__button {
+  padding: 0.5rem 1rem;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.container__card__content__button:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.cart {
+  position: relative; /* Relative positioning to the parent cart div */
+  cursor: pointer;
+}
+
+.cart__items {
+  display: none; /* Hidden by default */
+  position: absolute;
+  top: 100%; /* Position below the cart icon */
+  right: 0; /* Align to the right edge of the cart icon */
+  background: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  overflow-y: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 100; /* Ensure it appears above other elements */
+}
+
+.cart__item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.cart__item p {
+  margin: 0;
+}
+
+.cart__empty {
+  text-align: center;
+  font-style: italic;
+}
+
+footer {
+  background-color: #000;
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+footer .footer-content p a {
+  text-decoration: none;
+}/*# sourceMappingURL=main.css.map */

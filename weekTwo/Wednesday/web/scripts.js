@@ -72,11 +72,11 @@ const sortByDescButton = document.getElementById('sort-price-desc');
 const sortByDateAscButton = document.getElementById('sort-date-asc');
 const sortByDateDescButton = document.getElementById('sort-date-desc');
 
-
 sortByAscButton.addEventListener('click', () => fetchData(false, 'price-asc'));
 sortByDescButton.addEventListener('click', () => fetchData(false, 'price-desc'));
 sortByDateAscButton.addEventListener('click', () => fetchData(false, 'date-asc'));
 sortByDateDescButton.addEventListener('click', () => fetchData(false, 'date-desc'));
+
 
 // Event listener for "View Favorites"
 const viewFavoritesButton = document.getElementById('view-favorites')
